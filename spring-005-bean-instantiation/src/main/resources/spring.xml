@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="sb" class="com.qge.spring.bean.SpringBean"></bean>
+    <bean id="starBean" class="com.qge.spring.bean.StarFactory" factory-method="get"></bean>
+    <bean id="gunFactory" class="com.qge.spring.bean.GunFactory"></bean>
+    <bean id="gun" factory-bean="gunFactory" factory-method="get"></bean>
+    <bean id="personFactoryBean" class="com.qge.spring.bean.PersonFactoryBean"></bean>
+    <bean id="DateFactoryBean" class="com.qge.spring.bean.DateFactoryBean">
+        <constructor-arg value="1997-06-03"></constructor-arg>
+    </bean>
+    <bean id="student" class="com.qge.spring.bean.Student">
+        <constructor-arg index="0" value="时晔"></constructor-arg>
+        <constructor-arg index="1" ref="DateFactoryBean"></constructor-arg>
+    </bean>
+</beans>

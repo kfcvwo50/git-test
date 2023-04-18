@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="orderDaoBean" class="com.qge.spring.dao.OrderDao"></bean>
+
+    <bean id="orderServiceBean" class="com.qge.spring.service.OrderService">
+        <property name="orderDao" ref="orderDaoBean"></property>
+    </bean>
+
+    <bean id="orderServiceBean2" class="com.qge.spring.service.OrderService">
+        <property name="orderDao">
+            <bean class="com.qge.spring.dao.OrderDao"></bean>
+        </property>
+    </bean>
+    <bean id="userBean" class="com.qge.spring.bean.User">
+        <property name="age" value="13"></property>
+        <property name="username" value="张三"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+    <bean id="myDataSource" class="com.qge.spring.jdbc.MyDataSource">
+        <property name="username" value="root"></property>
+        <property name="password" value="shiyeAsAs1997063"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/spring"></property>
+        <property name="driver" value="com.mysql.cj.jdbc.Driver"></property>
+    </bean>
+</beans>

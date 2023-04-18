@@ -1,0 +1,5 @@
+com/qge/myspring/bean/UserDao.class
+com/qge/myspring/bean/UserService.class
+org/myspringframework/core/ApplicationContext.class
+org/myspringframework/core/ClassPathXmlApplicationContext.class
+com/qge/myspring/bean/User.class

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="personBean" class="com.qge.spring.bean.Person">
+        <property name="names">
+            <list>
+                <value>张三</value>
+                <value>张三</value>
+                <value>张三</value>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>张三</value>
+                <value>李四</value>
+                <value>李四</value>
+            </set>
+        </property>
+        <property name="phones">
+            <map>
+                <entry key="时晔" value="13063888386"></entry>
+                <entry key="杨颖" value="13624820411"></entry>
+                <entry key="杨幂" value="15110060710"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="driver">com.mysql.cj.jdbc.Driver</prop>
+                <prop key="url">jdbc:mysql://localhost:3306/spring</prop>
+                <prop key="username">root</prop>
+                <prop key="password">shiyeAsAs1997063</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

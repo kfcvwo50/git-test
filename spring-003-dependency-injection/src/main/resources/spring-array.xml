@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="girl" class="com.qge.spring.bean.Girl">
+        <property name="name" value="昆凌"></property>
+    </bean>
+    <bean id="girl2" class="com.qge.spring.bean.Girl">
+        <property name="name" value="蔡依林"></property>
+    </bean>
+    <bean id="girl3" class="com.qge.spring.bean.Girl">
+        <property name="name" value="桂纶镁"></property>
+    </bean>
+    <bean id="jay" class="com.qge.spring.bean.Jay">
+        <property name="hobbies">
+            <array>
+                <value>演唱忘词</value>
+                <value>场地超时</value>
+                <value>开法拉利</value>
+            </array>
+        </property>
+        <property name="girls">
+            <array>
+                <ref bean="girl"></ref>
+                <ref bean="girl2"></ref>
+                <ref bean="girl3"></ref>
+            </array>
+        </property>
+    </bean>
+</beans>
