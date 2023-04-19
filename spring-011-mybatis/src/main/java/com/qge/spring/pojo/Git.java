@@ -11,4 +11,6 @@ package com.qge.spring.pojo;
 public class Git {
     Double money;
     String name;
+    int age;
+
 }
