@@ -12,5 +12,5 @@ public class Git {
     Double money;
     String name;
     int age;
-
+    String laalla;
 }
